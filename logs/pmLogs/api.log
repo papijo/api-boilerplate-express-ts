@@ -1,0 +1,5 @@
+{
+  type: 'Server API Initialization',
+  message: '⚡️ Backend Server running on port 9000',
+  date: 2022-10-30T00:53:46.536Z
+}

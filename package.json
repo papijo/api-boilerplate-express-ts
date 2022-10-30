@@ -1,0 +1,54 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Boiler Plate Code for Server Applications",
+  "main": "server.ts",
+  "scripts": {
+    "test": "mocha --recursive",
+    "build": "npx tsc",
+    "start": "node dist/server.js",
+    "serve": "pm2 start dist/server.js --name API -o ./logs/pmLogs/api.log -e ./logs/pmLogs/error.log",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papijo/api-boilerplate-express-ts.git"
+  },
+  "author": "Ebhota Jonathan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/papijo/api-boilerplate-express-ts/issues"
+  },
+  "homepage": "https://github.com/papijo/api-boilerplate-express-ts#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/crypto-js": "^4.1.1",
+    "@types/express": "^4.17.14",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^18.11.7",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "concurrently": "^7.5.0",
+    "mocha": "^10.1.0",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.1.3",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "express-rate-limit": "^6.6.0",
+    "express-validator": "^6.14.2",
+    "helmet": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.4",
+    "mongoose": "^6.7.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
